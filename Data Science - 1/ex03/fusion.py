@@ -6,7 +6,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
+# Show in the database with multiple entries
+# SELECT *
+# FROM customers
+# WHERE user_id = '485174092'
+#   AND event_type = 'cart'
+#   AND price::numeric = 2.14;
 def insert_data_from_csv():
     user = os.getenv("POSTGRES_USER")
     password = os.getenv("POSTGRES_PASSWORD")
